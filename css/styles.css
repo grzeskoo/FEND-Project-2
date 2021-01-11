@@ -8,6 +8,11 @@
  *
 */
 
+@media only screen and (max-width: 1100px) {
+    html {
+        font-size: 80%;
+    }
+}
 
 /* ---- Base Rules ---- */
 body {
@@ -108,13 +113,13 @@ section {
     color: #fff;
 }
 
-
 /* ---- Theme Rules ---- */
 /* Landing Container Styles */
 .landing__container {
     padding: 1em;
     text-align: left;
 }
+
 
 @media only screen and (min-width: 35em) {
     .landing__container {
@@ -230,4 +235,8 @@ section.your-active-class .landing__container::after {
     color: white;
     border-radius: 5px;
 
+}
+
+.navbar__menu .active_menu {
+    background: rgb(192, 3, 3);
 }

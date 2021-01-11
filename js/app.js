@@ -46,6 +46,19 @@ function setActive(element, clasName) {
     element.classList.add(clasName)
 }
 
+function setActiveMenu(element, clasName) {
+    //remove other
+    const activeLink = document.querySelector(`a[href="#${element.getAttribute("id")}"]`);
+    // console.log(activeLink);
+    const actMenu = document.querySelector('.' + clasName)
+    // console.log(actMenu)
+    if (actMenu) {
+        actMenu.classList.remove(clasName)
+    }
+    //add active class
+    activeLink.classList.add(clasName)
+}
+
 /**
  * End Helper Functions
  * Begin Main Functions
@@ -67,6 +80,7 @@ window.addEventListener('scroll', function() {
     sections.forEach((element) => {
         if (isInViewport(element)) {
             setActive(element, 'active')
+            setActiveMenu(element, 'active_menu')
         }
     })
 })
